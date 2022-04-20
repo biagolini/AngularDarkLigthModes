@@ -1,32 +1,8 @@
 @import "@angular/material/theming";
 @include mat-core();
 
-/* Definir cores claras */
-$light-primary: mat-palette($mat-blue);
-$light-secondary: mat-palette($mat-indigo, A200, A400, A700);
-$light-warn: mat-palette($mat-red);
-
-/* Definir tema das cores claras */
-$custom-light-theme: mat-light-theme(
-  $light-primary,
-  $light-secondary,
-  $light-warn
-);
-
-/* Definir cores escuras */
-$dark-primary: mat-palette($mat-gray, 900);
-$dark-secondary: mat-palette($mat-brown, 200, 400, 900);
-$dark-warn: mat-palette($mat-red);
-
-/* Definir tema das cores claras */
-$custom-dark-theme: mat-dark-theme($dark-primary, $dark-secondary, $dark-warn);
-
-// Definir a cor padrão
-@include angular-material-theme($custom-light-theme);
-
-.theme-dark {
-  @include angular-material-theme($custom-dark-theme);
-}
+// importar tema personalizado
+@import "themes.scss";
 
 html,
 body {
@@ -61,4 +37,8 @@ h1 {
 
 .al-center {
   text-align: center;
+}
+
+.table-container {
+  margin-top: 20px;
 }

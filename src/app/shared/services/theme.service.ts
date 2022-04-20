@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class ThemeService {
   
   setTheme(darkTheme: boolean) {
-    if (darkTheme) this.theme = 'theme-dark';
+    if (darkTheme) this.theme = 'theme-alternate';
     else this.theme = '';
   }
 
